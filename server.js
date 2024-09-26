@@ -20,7 +20,7 @@ io.on('connection', (socket) => {
     } )
 
     socket.on('chat message', function(msg) {
-        messageHistory.appendChild(msg);
+        messageHistory.push(msg);
     });
 
     // Handle user disconnect
