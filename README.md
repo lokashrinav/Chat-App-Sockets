@@ -92,7 +92,7 @@ To run the application locally:
 
 ## Project Structure
 
-Chat-App-Sockets/
+```Chat-App-Sockets/
 ├── public/
 │   ├── index.html
 │   ├── script.js
@@ -100,7 +100,7 @@ Chat-App-Sockets/
 ├── Procfile
 ├── package.json
 ├── server.js
-└── README.md
+└── README.md```
 
 ### Directory and File Descriptions
 
