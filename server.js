@@ -21,6 +21,7 @@ io.on('connection', (socket) => {
 
     socket.on('chat message', function(msg) {
         messageHistory.push(msg);
+        io.emit('chat message', msg); // Broadcast the message to all clients
     });
 
     // Handle user disconnect
