@@ -16,11 +16,11 @@ io.on('connection', (socket) => {
     console.log('A user connected');
 
     messageHistory.forEach((elem) => {
-        socket.emit('chat message', msg);
+        socket.emit('chat message', elem);
     } )
 
     socket.on('chat message', function(msg) {
-        messageHistory.appendChild(item);
+        messageHistory.appendChild(msg);
     });
 
     // Handle user disconnect
