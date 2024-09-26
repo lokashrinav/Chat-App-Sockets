@@ -100,7 +100,8 @@ To run the application locally:
 ├── Procfile
 ├── package.json
 ├── server.js
-└── README.md```
+└── README.md
+```
 
 ### Directory and File Descriptions
 
