@@ -6,6 +6,8 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server);
 
+let messageHistory = []
+
 // Serve static files from the "public" directory
 app.use(express.static('public'));
 
@@ -13,9 +15,12 @@ app.use(express.static('public'));
 io.on('connection', (socket) => {
     console.log('A user connected');
 
-    // Listen for chat messages
-    socket.on('chat message', (msg) => {
-        io.emit('chat message', msg); // Broadcast the message to all clients
+    messageHistory.forEach((elem) => {
+        socket.emit('chat message', msg);
+    } )
+
+    socket.on('chat message', function(msg) {
+        messageHistory.appendChild(item);
     });
 
     // Handle user disconnect
