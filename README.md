@@ -31,10 +31,6 @@ A real-time chat application built with Node.js and Socket.IO, deployed on Herok
 - **[Express.js](https://expressjs.com/):** Web framework for Node.js.
 - **[Socket.IO](https://socket.io/):** Enables real-time, bidirectional communication.
 - **[Heroku](https://www.heroku.com/):** Cloud platform for deployment.
-- **[Helmet](https://helmetjs.github.io/):** Security middleware for Express.
-- **[Compression](https://github.com/expressjs/compression):** Middleware to compress response bodies.
-- **[Morgan](https://github.com/expressjs/morgan):** HTTP request logger middleware.
-- **[CORS](https://github.com/expressjs/cors):** Middleware to enable Cross-Origin Resource Sharing.
 
 ## Prerequisites
 
