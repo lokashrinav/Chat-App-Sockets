@@ -5,7 +5,6 @@ const input = document.getElementById('input');
 const messages = document.getElementById('messages');
 
 
-// Send message on form submit
 form.addEventListener('submit', function(e) {
     e.preventDefault();
     if (input.value) {
@@ -14,7 +13,6 @@ form.addEventListener('submit', function(e) {
     }
 });
 
-// Listen for chat messages and display them
 socket.on('chat message', function(msg) {
     const item = document.createElement('li');
     item.textContent = msg;

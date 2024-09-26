@@ -8,10 +8,8 @@ const io = socketIo(server);
 
 let messageHistory = []
 
-// Serve static files from the "public" directory
 app.use(express.static('public'));
 
-// Listen for client connections
 io.on('connection', (socket) => {
     console.log('A user connected');
 
@@ -21,16 +19,14 @@ io.on('connection', (socket) => {
 
     socket.on('chat message', function(msg) {
         messageHistory.push(msg);
-        io.emit('chat message', msg); // Broadcast the message to all clients
+        io.emit('chat message', msg); 
     });
 
-    // Handle user disconnect
     socket.on('disconnect', () => {
         console.log('User disconnected');
     });
 });
 
-// Start the server on all network interfaces
 const PORT = process.env.PORT || 3000;
 server.listen(PORT, '0.0.0.0', () => {
     console.log(`Server is running on http://localhost:${PORT}`);
